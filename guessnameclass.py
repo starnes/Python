@@ -1,40 +1,46 @@
 import random
-RED = 'red'
-BLUE = 'blue'
-GREEN = 'green'
-ORANGE = 'orange'
-PURPLE = 'purple'
-PINK = 'pink'
 
-class Color:
-    pass
+def program():
+    RED = 'red'
+    BLUE = 'blue'
+    GREEN = 'green'
+    ORANGE = 'orange'
+    PURPLE = 'purple'
+    PINK = 'pink'
 
-c1 = Color()
-c2 = Color()
-c3 = Color()
+    class Color:
+        pass
 
-guesses_made = 0
+    c1 = Color()
+    c2 = Color()
+    c3 = Color()
 
-c1.name = input('Hello! What is your name?\n')
+    guesses_made = 0
 
-c2.color = [BLUE, GREEN, RED, ORANGE, PURPLE, PINK]
+    c1.name = input('Hello! What is your name?\n')
 
-c2.color = random.choice(c2.color)
-print ('Well, {0}, I am thinking of a color between blue, green, red, orange, purple and pink.'.format(c1.name))
+    c2.color = [BLUE, GREEN, RED, ORANGE, PURPLE, PINK]
 
-while guesses_made < 3:
+    c2.color = random.choice(c2.color)
+    print ('Well, {0}, I am thinking of a color between blue, green, red, orange, purple and pink.'.format(c1.name))
 
-    c3.guess = input('Take a guess: ')
+    while guesses_made < 3:
 
-    guesses_made += 1
+        c3.guess = input('Take a guess: ')
 
-    if c3.guess != c2.color:
-        print ('Your guess is wrong.')
+        guesses_made += 1
+
+        if c3.guess != c2.color:
+            print ('Your guess is wrong.')
+
+        if c3.guess == c2.color:
+            break
 
     if c3.guess == c2.color:
-        break
-
-if c3.guess == c2.color:
-    print ('Good job, {0}! You guessed my color in {1} guesses!'.format(c1.name, guesses_made))
-else:
-    print ('Nope. The color I was thinking of was {0}'.format(c2.color))
+        print ('Good job, {0}! You guessed my color in {1} guesses!'.format(c1.name, guesses_made))
+    else:
+        print ('Nope. The color I was thinking of was {0}'.format(c2.color))
+        
+        
+if __name__ == "__main__":
+    program()
