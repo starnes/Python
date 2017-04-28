@@ -17,7 +17,7 @@ guesses_made = 0
 
 c1.name = input('Hello! What is your name?\n')
 
-c2.color = ['BLUE', 'GREEN', 'RED', 'ORANGE', 'PURPLE', 'PINK']
+c2.color = [BLUE, GREEN, RED, ORANGE, PURPLE, PINK]
 
 c2.color = random.choice(c2.color)
 print ('Well, {0}, I am thinking of a color between blue, green, red, orange, purple and pink.'.format(c1.name))
