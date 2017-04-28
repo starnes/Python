@@ -1,4 +1,4 @@
-# explain game
+# A program that has a list of six colors and chooses one by random. The user can then has three chances to quess the right color. After the third attepmt the program outputs "Nope. The color I was thinking of was..."
 import random
 # this is the function that will execute the program
 def program():
